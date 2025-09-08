@@ -61,96 +61,98 @@ This is a fully functional E-Commerce backend API built using Node.js, designed 
 
 - Supports compression
 
-## Clone the repository
+## 🛠️ Installation
 
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Jamesab07/ecommerce-api.git
 
-##Navigate to project
+2.Navigate to project
 
 cd ecommerce-api
 
-## Install dependencies
+3.Install dependencies
 
 npm install
 
-##Create a .env file in the root directory with the following:
-##Environment Variables
+4.Create a .env file in the root directory with the following:
 
-##Server configuration
+# Server configuration
+PORT=3100
+NODE_ENV=development
+BASE_URL=http://localhost:3100/api/v1
 
-##PORT=3100
-##NODE_ENV=development
-##BASE_URL=http://localhost:3100/api/v1
-
-## MongoDB
+# MongoDB
 
 DATABASE=
 DATABASE_PASSWORD=
 
-## Email
+# Email
 
-EMAIL_USERNAME=your_email_address,
-EMAIL_PASSWORD=your_email_password,
-EMAIL_SERVICE=gmail,
+EMAIL_USERNAME=your_email_address
+EMAIL_PASSWORD=your_email_password
+EMAIL_SERVICE=gmail
 
-## JWT
+# JWT
 
-##JWT_SECRET_KEY=
-##JWT_EXPIRE_TIME=30d
+JWT_SECRET_KEY=
+JWT_EXPIRE_TIME=30d
 
-## Stripe
+# Stripe
 
-##STRIPE_SECRET_KEY=your_stripe_secret
-##STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+STRIPE_SECRET_KEY=your_stripe_secret
+STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 
-Start the server:
+4.Start the server:
 use script from package.json file
 run: npm start
 
 📌 API Highlights
 Auth
 
-      POST /api/v1/auth/singUp → Register new user + send verification email
-      GET /api/v1/auth/verify-email/:token → Verify email
-      POST /api/v1/auth/login → Login user
+     POST /api/v1/auth/singUp → Register new user + send verification email
+     GET /api/v1/auth/verify-email/:token → Verify email
+     POST /api/v1/auth/login → Login user
 
-    Products
+   Products
 
-      GET /api/v1/products → Fetch all products
-      GET /api//v1/products/:id → Fetch single product
-      POST /api/v1/products → Add product (admin only)
+     GET /api/v1/products → Fetch all products
+     GET /api//v1/products/:id → Fetch single product
+     POST /api/v1/products → Add product (admin only)
 
-    Cart
-      POST /api/v1/cart → Add product to cart
-      DELETE /api/v1/cart/:id → Remove from cart
+   Cart
+     POST /api/v1/cart → Add product to cart
+     DELETE /api/v1/cart/:id → Remove from cart
 
-    Wishlist
+   Wishlist
 
-      POST /api/v1/wishlist → Add product to wishlist
-      DELETE /api/v1/wishlist/:id → Remove product from wishlist
+     POST /api/v1/wishlist → Add product to wishlist
+     DELETE /api/v1/wishlist/:id → Remove product from wishlist
 
-    Orders / Shipping
-      POST /api/v1/orders/checkout-session/:cartId → Checkout with Stripe (dynamic shipping from DB)
+   Orders / Shipping
+     POST /api/v1/orders/checkout-session/:cartId → Checkout with Stripe (dynamic shipping from DB)
 
 ## 📂 Project Structure
 
-📦 ecommerce-backend  
- ┣ 📂 controllers # Business logic for routes  
- ┣ 📂 dev-data # Seed data for testing  
- ┣ 📂 middleware # image helper,API features, error handling  
- ┣ 📂 models # Mongoose schemas (User, Product, Cart, Order, Shipping, etc.)  
- ┣ 📂 routes # API route definitions  
- ┣ 📂 uploads # Uploaded images  
- ┃ ┣ 📂 brands # Brand images  
- ┃ ┣ 📂 category # Category images  
- ┃ ┣ 📂 products # Product images  
- ┃ ┗ 📂 users # User profile images  
- ┣ 📂 utils # Utility functions  
- ┣ 📜 app.js # Express app configuration  
- ┣ 📜 server.js # Application entry point  
- ┣ 📜 package.json # Dependencies and scripts  
- ┣ 📜 .env.example # Example environment variables  
- ┗ 📜 readme.md # Project documentation
+📦 ecommerce-backend
+┣ 📂 controllers # Business logic for routes
+┣ 📂 dev-data # Seed data for testing
+┣ 📂 middleware # image helper,API features, error handling
+┣ 📂 models # Mongoose schemas (User, Product, Cart, Order, Shipping, etc.)
+┣ 📂 routes # API route definitions
+┣ 📂 uploads # Uploaded images
+┃ ┣ 📂 brands # Brand images
+┃ ┣ 📂 category # Category images
+┃ ┣ 📂 products # Product images
+┃ ┗ 📂 users # User profile images
+┣ 📂 utils # Utility functions
+┣ 📜 app.js # Express app configuration
+┣ 📜 server.js # Application entry point
+┣ 📜 package.json # Dependencies and scripts
+┣ 📜 .env.example # Example environment variables
+┗ 📜 readme.md # Project documentation
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+```
