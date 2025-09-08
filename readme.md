@@ -61,48 +61,47 @@ This is a fully functional E-Commerce backend API built using Node.js, designed 
 
 - Supports compression
 
-# Clone the repository
+## Clone the repository
 
 git clone https://github.com/Jamesab07/ecommerce-api.git
 
-# Navigate to project
+##Navigate to project
 
 cd ecommerce-api
 
-# Install dependencies
+## Install dependencies
 
 npm install
 
-Create a .env file in the root directory with the following:
+##Create a .env file in the root directory with the following:
+##Environment Variables
 
-# Environment Variables
+##Server configuration
 
-# Server configuration
+##PORT=3100
+##NODE_ENV=development
+##BASE_URL=http://localhost:3100/api/v1
 
-PORT=3100
-NODE_ENV=development
-BASE_URL=http://localhost:3100/api/v1
-
-# MongoDB
+## MongoDB
 
 DATABASE=
 DATABASE_PASSWORD=
 
-# Email
+## Email
 
-EMAIL_USERNAME=your_email_address
-EMAIL_PASSWORD=your_email_password
-EMAIL_SERVICE=gmail
+EMAIL_USERNAME=your_email_address,
+EMAIL_PASSWORD=your_email_password,
+EMAIL_SERVICE=gmail,
 
-# JWT
+## JWT
 
-JWT_SECRET_KEY=
-JWT_EXPIRE_TIME=30d
+##JWT_SECRET_KEY=
+##JWT_EXPIRE_TIME=30d
 
-# Stripe
+## Stripe
 
-STRIPE_SECRET_KEY=your_stripe_secret
-STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+##STRIPE_SECRET_KEY=your_stripe_secret
+##STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
 
 Start the server:
 use script from package.json file
