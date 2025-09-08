@@ -1,3 +1,5 @@
+markdown
+
 🛍️ E-Commerce Backend API 🚀
 This is a fully functional E-Commerce backend API built using Node.js, designed to handle a range of features such as user authentication, role-based access, product management, and order processing with cash and Stripe payment integration.
 
@@ -75,7 +77,7 @@ Create a .env file in the root directory with the following:
 
 # Environment Variables
 
-# Server config
+# Server configuration
 
 PORT=3100
 NODE_ENV=development
