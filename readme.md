@@ -1,108 +1,103 @@
 🛍️ E-Commerce Backend API 🚀
 This is a fully functional E-Commerce backend API built using Node.js, designed to handle a range of features such as user authentication, role-based access, product management, and order processing with cash and Stripe payment integration.
 
-✨ Features
-🔐 User Authentication & Authorization:
+# ✨ Features
 
-    User registration with email verification
-    JWT-based authentication
-    Secure password hashing with bcrypt
-    password reset with verification code sent via email
-    Role-based access control (Admin, Manager, User).
+## 🔐 User Authentication & Authorization
 
-🛍️ Product & Category :
+- User registration with email verification
+- JWT-based authentication
+- Secure password hashing with bcrypt
+- Password reset via verification code sent via email
+- Role-based access control (Admin, Manager, Customer)
 
-    Browse products and categories without authentication.
-    Public: Browse products with search, filter, sort, and pagination
-    Support for sub-categories.
-    Admin: Create, update, and delete products
+## 🛍️ Product & Category
 
-🛒 Shopping Cart:
+- Browse products and categories without authentication
+- Public: search, filter, sort, and pagination
+- Support for sub-categories
+- Admin: Create, update, and delete products
 
-Add products to the shopping cart for registered users.
-Update item quantity
-Remove item or clear cart
-Cart total auto-calculation
+## 🛒 Shopping Cart
 
-🚚 Shipping & Orders
+- Add products to the cart (registered users)
+- Update item quantity
+- Remove items or clear cart
+- Auto-calculation of cart total
 
-    Dynamic shipping price: fetched from database based on the user’s selected state
-    Create and manage orders.
-    Support for discount coupons.
+## 🚚 Shipping & Orders
 
-💳 Payment Integration:
+- Dynamic shipping price fetched from DB
+- Create and manage orders
+- Support for discount coupons
 
-     Cash payments.
-     Stripe integration for card payments.
+## 💳 Payment Integration
 
-👑 Admin Features:
+- Cash payments
+- Stripe integration for card payments
 
-    Manage users, products, categories, and orders.
-    Upload and manage product images.
-    🔎 Search & Filtering:
+## 👑 Admin Features
 
-Advanced search functionality.
-Filtering, sorting, pagination, and field limiting.
+- Manage users, products, categories, and orders
+- Upload and manage product images
 
-🛡️ Security
+## 🔎 Search & Filtering
 
-This backend is secured with industry practices like:
-Helmet → sets secure HTTP headers
-express-mongo-sanitize → prevents MongoDB operator injection
-hpp → prevents HTTP parameter pollution
-express-rate-limit → limits repeated requests to prevent brute-force/DDoS
-CORS → safely configures cross-origin requests
-bcrypt → password hashing
+- Advanced search functionality
+- Filtering, sorting, pagination, and field limiting
 
-⚡ Performance Optimization:
+## 🛡️ Security
 
-    Support for compression.
+- Helmet → sets secure HTTP headers
+- express-mongo-sanitize → prevents MongoDB operator injection
+- hpp → prevents HTTP parameter pollution
+- express-rate-limit → limits repeated requests (brute-force/DDoS)
+- CORS → safely configures cross-origin requests
+- bcrypt → password hashing
 
-🛠️ Installation
-Clone the repository:
+## ⚡ Performance Optimization
+
+- Supports compression
+
+# Clone the repository
 
 git clone https://github.com/Jamesab07/ecommerce-api.git
-Navigate to the project directory:
+
+# Navigate to project
 
 cd ecommerce-api
-Install dependencies:
+
+# Install dependencies
 
 npm install
+
 Create a .env file in the root directory with the following:
 
 # Environment Variables
 
-# The port on which the server will run
+# Server config
 
 PORT=3100
-
-# Environment setting: 'development'
-
 NODE_ENV=development
+BASE_URL=http://localhost:3100/api/v1
 
-# MongoDB credentials and connection details
-
-# Database username for MongoDB
+# MongoDB
 
 DATABASE=
-
-# Database password for MongoDB
-
 DATABASE_PASSWORD=
 
-# Base URL for the application
-
-BASE_URL=http://localhost:3100/api/v1
+# Email
 
 EMAIL_USERNAME=your_email_address
 EMAIL_PASSWORD=your_email_password
 EMAIL_SERVICE=gmail
 
+# JWT
+
 JWT_SECRET_KEY=
-
-# Expiration time for JWTs
-
 JWT_EXPIRE_TIME=30d
+
+# Stripe
 
 STRIPE_SECRET_KEY=your_stripe_secret
 STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
