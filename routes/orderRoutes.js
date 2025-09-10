@@ -27,6 +27,9 @@ router.get(
   filterOrderForLoggedUser,
   findAllOrders
 );
+
+router.get("/:id", findSpecificOrder);
+
 router.patch("/:id/pay", restrictTo("admin", "manager"), updateOrderToPaid);
 router.patch(
   "/:id/deliver",
